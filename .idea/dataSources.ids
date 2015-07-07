@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - miprofesional@localhost" uuid="e6266aac-cc10-4cf3-89a7-74b9d4b356b9">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="miprofesional"/>
+    <table name="joomla_virtuemart_adminmenuentries" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" autoIncrement="true"/>
+      <column name="module_id" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="VGhlIElEIG9mIHRoZSBWTSBNb2R1bGUsIHRoaXMgSXRlbSBpcyBhc3NpZ25lZCB0bw=="/>
+      <column name="parent_id" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="name" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="JzAn"/>
+      <column name="link" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="JzAn"/>
+      <column name="depends" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="TmFtZXMgb2YgdGhlIFBhcmFtZXRlcnMsIHRoaXMgSXRlbSBkZXBlbmRzIG9u"/>
+      <column name="icon_class" sqlType="CHAR" precision="96" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="tooltip" sqlType="CHAR" precision="128" scale="0" nullable="true" jdbcType="1"/>
+      <column name="view" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="task" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="module_id" unique="false" columns="module_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+    </table>
+    <table name="joomla_virtuemart_calc_categories" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_calc_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_category_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_calc_id" unique="true" columns="virtuemart_calc_id,virtuemart_category_id"/>
+    </table>
+    <table name="joomla_virtuemart_calc_countries" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_calc_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_country_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_calc_id" unique="true" columns="virtuemart_calc_id,virtuemart_country_id"/>
+    </table>
+    <table name="joomla_virtuemart_calc_manufacturers" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_calc_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_manufacturer_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_calc_id" unique="true" columns="virtuemart_calc_id,virtuemart_manufacturer_id"/>
+    </table>
+    <table name="joomla_virtuemart_calc_shoppergroups" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_calc_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_shoppergroup_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_calc_id" unique="true" columns="virtuemart_calc_id,virtuemart_shoppergroup_id"/>
+    </table>
+    <table name="joomla_virtuemart_calc_states" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_calc_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_state_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_calc_id" unique="true" columns="virtuemart_calc_id,virtuemart_state_id"/>
+    </table>
+    <table name="joomla_virtuemart_calcs" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_calc_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ==" remarks="QmVsb25ncyB0byB2ZW5kb3I="/>
+      <column name="calc_jplugin_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="calc_name" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="TmFtZSBvZiB0aGUgcnVsZQ=="/>
+      <column name="calc_descr" sqlType="CHAR" precision="128" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="RGVzY3JpcHRpb24="/>
+      <column name="calc_kind" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="RGlzY291bnQvVGF4L01hcmdpbi9Db21taXNzaW9u"/>
+      <column name="calc_value_mathop" sqlType="CHAR" precision="8" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="dGhlIG1hdGhlbWF0aWNhbCBvcGVyYXRpb24gbGlrZSAoKywtLCslLC0lKQ=="/>
+      <column name="calc_value" sqlType="DECIMAL" precision="10" scale="4" nullable="false" jdbcType="3" def="MC4wMDAw" remarks="VGhlIEFtb3VudA=="/>
+      <column name="calc_currency" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="Q3VycmVuY3kgb2YgdGhlIFJ1bGU="/>
+      <column name="calc_shopper_published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="VmlzaWJsZSBmb3IgU2hvcHBlcnM="/>
+      <column name="calc_vendor_published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="VmlzaWJsZSBmb3IgVmVuZG9ycw=="/>
+      <column name="publish_up" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn" remarks="U3RhcnRkYXRlIGlmIG5vdGhpbmcgaXMgc2V0ID0gcGVybWFuZW50"/>
+      <column name="publish_down" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn" remarks="RW5kZGF0ZSBpZiBub3RoaW5nIGlzIHNldCA9IHBlcm1hbmVudA=="/>
+      <column name="for_override" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="calc_params" sqlType="VARCHAR" precision="18000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_calc_id"/>
+      <index name="calc_kind" unique="false" columns="calc_kind"/>
+      <index name="publish_down" unique="false" columns="publish_down"/>
+      <index name="publish_up" unique="false" columns="publish_up"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="shared" unique="false" columns="shared"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_carts" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_cart_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="virtuemart_vendor_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="cartData" sqlType="VARBINARY" precision="50000" scale="0" nullable="true" jdbcType="-3"/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_cart_id"/>
+      <index name="virtuemart_user_id" unique="false" columns="virtuemart_user_id"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_categories" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_category_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ==" remarks="QmVsb25ncyB0byB2ZW5kb3I="/>
+      <column name="category_template" sqlType="CHAR" precision="128" scale="0" nullable="true" jdbcType="1"/>
+      <column name="category_layout" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="category_product_layout" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="products_per_row" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="limit_list_step" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="limit_list_initial" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="hits" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="metarobot" sqlType="CHAR" precision="40" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="metaauthor" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_category_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="shared" unique="false" columns="shared"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_categories_es_es" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_category_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="category_name" sqlType="CHAR" precision="180" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="category_description" sqlType="VARCHAR" precision="19000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="metadesc" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="metakey" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="customtitle" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="slug" sqlType="CHAR" precision="192" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="virtuemart_category_id"/>
+      <index name="slug" unique="true" columns="slug"/>
+    </table>
+    <table name="joomla_virtuemart_category_categories" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="category_parent_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="category_child_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="category_parent_id" unique="true" columns="category_parent_id,category_child_id"/>
+      <index name="category_child_id" unique="false" columns="category_child_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+    </table>
+    <table name="joomla_virtuemart_category_medias" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_category_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_media_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_category_id" unique="true" columns="virtuemart_category_id,virtuemart_media_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+    </table>
+    <table name="joomla_virtuemart_configs" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_config_id" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" autoIncrement="true"/>
+      <column name="config" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_config_id"/>
+    </table>
+    <table name="joomla_virtuemart_countries" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_country_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_worldzone_id" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="country_name" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="country_3_code" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="country_2_code" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_country_id"/>
+      <index name="country_2_code" unique="false" columns="country_2_code"/>
+      <index name="country_3_code" unique="false" columns="country_3_code"/>
+      <index name="country_name" unique="false" columns="country_name"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+    </table>
+    <table name="joomla_virtuemart_coupons" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_coupon_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="coupon_code" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="percent_or_total" sqlType="ENUM" precision="8" scale="0" nullable="false" jdbcType="1" def="J3BlcmNlbnQn"/>
+      <column name="coupon_type" sqlType="ENUM" precision="9" scale="0" nullable="false" jdbcType="1" def="J2dpZnQn"/>
+      <column name="coupon_value" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="coupon_start_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="coupon_expiry_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="coupon_value_valid" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="coupon_used" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_coupon_id"/>
+      <index name="coupon_code" unique="false" columns="coupon_code"/>
+      <index name="coupon_type" unique="false" columns="coupon_type"/>
+      <index name="published" unique="false" columns="published"/>
+    </table>
+    <table name="joomla_virtuemart_currencies" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_currency_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="currency_name" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="currency_code_2" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="currency_code_3" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="currency_numeric_code" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="currency_exchange_rate" sqlType="DECIMAL" precision="10" scale="5" nullable="true" jdbcType="3"/>
+      <column name="currency_symbol" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="currency_decimal_place" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="currency_decimal_symbol" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="currency_thousands" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="currency_positive_style" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="currency_negative_style" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_currency_id"/>
+      <index name="currency_code_3" unique="false" columns="currency_code_3"/>
+      <index name="currency_name" unique="false" columns="currency_name"/>
+      <index name="currency_numeric_code" unique="false" columns="currency_numeric_code"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="shared" unique="false" columns="shared"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_customs" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_custom_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="custom_parent_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="custom_jplugin_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="custom_element" sqlType="CHAR" precision="50" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="admin_only" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="MTpEaXNwbGF5IGluIGFkbWluIG9ubHk="/>
+      <column name="custom_title" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="ZmllbGQgdGl0bGU="/>
+      <column name="show_title" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="custom_tip" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="dGlw"/>
+      <column name="custom_value" sqlType="VARCHAR" precision="2000" scale="0" nullable="true" jdbcType="12" remarks="ZGVmYXVsdCB2YWx1ZQ=="/>
+      <column name="custom_desc" sqlType="CHAR" precision="255" scale="0" nullable="true" jdbcType="1" remarks="ZGVzY3JpcHRpb24gb3IgdW5pdA=="/>
+      <column name="field_type" sqlType="CHAR" precision="2" scale="0" nullable="false" jdbcType="1" def="JzAn" remarks="UzpzdHJpbmcsSTppbnQsUDpwYXJlbnQsIEI6Ym9vbCxEOmRhdGUsVDp0aW1lLEg6aGlkZGVu"/>
+      <column name="is_list" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="bGlzdCBvZiB2YWx1ZXM="/>
+      <column name="is_hidden" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="MTpoaWRkZW4="/>
+      <column name="is_cart_attribute" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QWRkIGF0dHJpYnV0ZXMgdG8gY2FydA=="/>
+      <column name="is_input" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QWRkIGlucHV0IHRvIGNhcnQ="/>
+      <column name="layout_pos" sqlType="CHAR" precision="24" scale="0" nullable="true" jdbcType="1" remarks="TGF5b3V0IFBvc2l0aW9u"/>
+      <column name="custom_params" sqlType="VARCHAR" precision="17000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="dmFsaWQgZm9yIGFsbCB2ZW5kb3JzPw=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_custom_id"/>
+      <index name="custom_element" unique="false" columns="custom_element"/>
+      <index name="custom_parent_id" unique="false" columns="custom_parent_id"/>
+      <index name="field_type" unique="false" columns="field_type"/>
+      <index name="is_cart_attribute" unique="false" columns="is_cart_attribute"/>
+      <index name="is_input" unique="false" columns="is_input"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="shared" unique="false" columns="shared"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_invoices" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_invoice_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="virtuemart_order_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="invoice_number" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="order_status" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="xhtml" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_invoice_id"/>
+      <index name="invoice_number" unique="true" columns="invoice_number,virtuemart_vendor_id"/>
+      <index name="virtuemart_order_id" unique="false" columns="virtuemart_order_id"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_manufacturer_medias" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_manufacturer_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_media_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_manufacturer_id" unique="true" columns="virtuemart_manufacturer_id,virtuemart_media_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+    </table>
+    <table name="joomla_virtuemart_manufacturercategories" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_manufacturercategories_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_manufacturercategories_id"/>
+      <index name="published" unique="false" columns="published"/>
+    </table>
+    <table name="joomla_virtuemart_manufacturercategories_es_es" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_manufacturercategories_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="mf_category_name" sqlType="CHAR" precision="180" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="mf_category_desc" sqlType="VARCHAR" precision="19000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="slug" sqlType="CHAR" precision="192" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="virtuemart_manufacturercategories_id"/>
+      <index name="slug" unique="true" columns="slug"/>
+    </table>
+    <table name="joomla_virtuemart_manufacturers" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_manufacturer_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_manufacturercategories_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="hits" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_manufacturer_id"/>
+      <index name="virtuemart_manufacturercategories_id" unique="true" columns="virtuemart_manufacturer_id,virtuemart_manufacturercategories_id"/>
+      <index name="published" unique="false" columns="published"/>
+    </table>
+    <table name="joomla_virtuemart_manufacturers_es_es" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_manufacturer_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="mf_name" sqlType="CHAR" precision="180" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="mf_email" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="mf_desc" sqlType="VARCHAR" precision="19000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="mf_url" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="slug" sqlType="CHAR" precision="192" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="virtuemart_manufacturer_id"/>
+      <index name="slug" unique="true" columns="slug"/>
+    </table>
+    <table name="joomla_virtuemart_medias" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_media_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="file_title" sqlType="CHAR" precision="126" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="file_description" sqlType="CHAR" precision="254" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="file_meta" sqlType="CHAR" precision="254" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="file_class" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="file_mimetype" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="file_type" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="file_url" sqlType="VARCHAR" precision="900" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="file_url_thumb" sqlType="VARCHAR" precision="900" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="file_is_product_image" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="file_is_downloadable" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="file_is_forSale" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="file_params" sqlType="VARCHAR" precision="17000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="file_lang" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_media_id"/>
+      <index name="file_type" unique="false" columns="file_type"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="shared" unique="false" columns="shared"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_migration_oldtonew_ids" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="cats" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="catsxref" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="manus" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="mfcats" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="shoppergroups" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="products" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="products_start" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="orderstates" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orders" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="attributes" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="relatedproducts" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orders_start" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="joomla_virtuemart_modules" schema="" catalog="miprofesional" type="TABLE">
+      <column name="module_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="module_name" sqlType="CHAR" precision="255" scale="0" nullable="true" jdbcType="1"/>
+      <column name="module_description" sqlType="VARCHAR" precision="21000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="module_perms" sqlType="CHAR" precision="255" scale="0" nullable="true" jdbcType="1"/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="is_admin" sqlType="ENUM" precision="2" scale="0" nullable="false" jdbcType="1" def="JzAn"/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="module_id"/>
+      <index name="module_name" unique="false" columns="module_name"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+    </table>
+    <table name="joomla_virtuemart_order_calc_rules" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_order_calc_rule_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_calc_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="virtuemart_order_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="virtuemart_order_item_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="calc_rule_name" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="TmFtZSBvZiB0aGUgcnVsZQ=="/>
+      <column name="calc_kind" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="RGlzY291bnQvVGF4L01hcmdpbi9Db21taXNzaW9u"/>
+      <column name="calc_mathop" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="RGlzY291bnQvVGF4L01hcmdpbi9Db21taXNzaW9u"/>
+      <column name="calc_amount" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="calc_result" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="calc_value" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="calc_currency" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="calc_params" sqlType="VARCHAR" precision="18000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_order_calc_rule_id"/>
+      <index name="virtuemart_calc_id" unique="false" columns="virtuemart_calc_id"/>
+      <index name="virtuemart_order_id" unique="false" columns="virtuemart_order_id"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_order_histories" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_order_history_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_order_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="order_status_code" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="JzAn"/>
+      <column name="customer_notified" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="comments" sqlType="VARCHAR" precision="21000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_order_history_id"/>
+    </table>
+    <table name="joomla_virtuemart_order_items" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_order_item_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_order_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="virtuemart_product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="order_item_sku" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="order_item_name" sqlType="VARCHAR" precision="4096" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="product_quantity" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="product_item_price" sqlType="DECIMAL" precision="15" scale="5" nullable="true" jdbcType="3"/>
+      <column name="product_priceWithoutTax" sqlType="DECIMAL" precision="15" scale="5" nullable="true" jdbcType="3"/>
+      <column name="product_tax" sqlType="DECIMAL" precision="15" scale="5" nullable="true" jdbcType="3"/>
+      <column name="product_basePriceWithTax" sqlType="DECIMAL" precision="15" scale="5" nullable="true" jdbcType="3"/>
+      <column name="product_discountedPriceWithoutTax" sqlType="DECIMAL" precision="15" scale="5" nullable="true" jdbcType="3"/>
+      <column name="product_final_price" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="product_subtotal_discount" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="product_subtotal_with_tax" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="order_item_currency" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="order_status" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="product_attribute" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="delivery_date" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_order_item_id"/>
+      <index name="order_status" unique="false" columns="order_status"/>
+      <index name="virtuemart_order_id" unique="false" columns="virtuemart_order_id"/>
+      <index name="virtuemart_product_id" unique="false" columns="virtuemart_product_id"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_order_userinfos" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_order_userinfo_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_order_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="address_type" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="address_type_name" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="company" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="title" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="last_name" sqlType="CHAR" precision="48" scale="0" nullable="true" jdbcType="1"/>
+      <column name="first_name" sqlType="CHAR" precision="48" scale="0" nullable="true" jdbcType="1"/>
+      <column name="middle_name" sqlType="CHAR" precision="48" scale="0" nullable="true" jdbcType="1"/>
+      <column name="phone_1" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="phone_2" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="fax" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="address_1" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="address_2" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="city" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="virtuemart_state_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_country_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="zip" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="email" sqlType="CHAR" precision="128" scale="0" nullable="true" jdbcType="1"/>
+      <column name="agreed" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="tos" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="customer_note" sqlType="VARCHAR" precision="2500" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_order_userinfo_id"/>
+      <index name="address_type" unique="false" columns="address_type"/>
+      <index name="virtuemart_order_id" unique="false" columns="virtuemart_order_id"/>
+      <index name="virtuemart_user_id" unique="false" columns="virtuemart_user_id,address_type"/>
+    </table>
+    <table name="joomla_virtuemart_orders" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_order_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="order_number" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="customer_number" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="order_pass" sqlType="CHAR" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="order_total" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="order_salesPrice" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="order_billTaxAmount" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="order_billTax" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="order_billDiscountAmount" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="order_discountAmount" sqlType="DECIMAL" precision="15" scale="5" nullable="false" jdbcType="3" def="MC4wMDAwMA=="/>
+      <column name="order_subtotal" sqlType="DECIMAL" precision="15" scale="5" nullable="true" jdbcType="3"/>
+      <column name="order_tax" sqlType="DECIMAL" precision="10" scale="5" nullable="true" jdbcType="3"/>
+      <column name="order_shipment" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
+      <column name="order_shipment_tax" sqlType="DECIMAL" precision="10" scale="5" nullable="true" jdbcType="3"/>
+      <column name="order_payment" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
+      <column name="order_payment_tax" sqlType="DECIMAL" precision="10" scale="5" nullable="true" jdbcType="3"/>
+      <column name="coupon_discount" sqlType="DECIMAL" precision="12" scale="2" nullable="false" jdbcType="3" def="MC4wMA=="/>
+      <column name="coupon_code" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="order_discount" sqlType="DECIMAL" precision="12" scale="2" nullable="false" jdbcType="3" def="MC4wMA=="/>
+      <column name="order_currency" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="order_status" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="user_currency_id" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="user_currency_rate" sqlType="DECIMAL" precision="10" scale="5" nullable="false" jdbcType="3" def="MS4wMDAwMA=="/>
+      <column name="virtuemart_paymentmethod_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4"/>
+      <column name="virtuemart_shipmentmethod_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4"/>
+      <column name="delivery_date" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="order_language" sqlType="CHAR" precision="7" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ip_address" sqlType="CHAR" precision="15" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_order_id"/>
+      <index name="order_number" unique="false" columns="order_number"/>
+      <index name="virtuemart_paymentmethod_id" unique="false" columns="virtuemart_paymentmethod_id"/>
+      <index name="virtuemart_shipmentmethod_id" unique="false" columns="virtuemart_shipmentmethod_id"/>
+      <index name="virtuemart_user_id" unique="false" columns="virtuemart_user_id"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_orderstates" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_orderstate_id" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="order_status_code" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="order_status_name" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="order_status_description" sqlType="VARCHAR" precision="20000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="order_stock_handle" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0En"/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_orderstate_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_paymentmethod_shoppergroups" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_paymentmethod_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_shoppergroup_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_paymentmethod_id" unique="true" columns="virtuemart_paymentmethod_id,virtuemart_shoppergroup_id"/>
+    </table>
+    <table name="joomla_virtuemart_paymentmethods" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_paymentmethod_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="payment_jplugin_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="payment_element" sqlType="CHAR" precision="50" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="payment_params" sqlType="VARCHAR" precision="19000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="dmFsaWRlIGZvciBhbGwgdmVuZG9ycz8="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_paymentmethod_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="payment_element" unique="false" columns="payment_element,virtuemart_vendor_id"/>
+      <index name="payment_jplugin_id" unique="false" columns="payment_jplugin_id"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_paymentmethods_es_es" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_paymentmethod_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="payment_name" sqlType="CHAR" precision="180" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="payment_desc" sqlType="VARCHAR" precision="19000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="slug" sqlType="CHAR" precision="192" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="virtuemart_paymentmethod_id"/>
+      <index name="slug" unique="true" columns="slug"/>
+    </table>
+    <table name="joomla_virtuemart_product_categories" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_category_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_product_id" unique="true" columns="virtuemart_product_id,virtuemart_category_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+    </table>
+    <table name="joomla_virtuemart_product_customfields" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_customfield_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="ZmllbGQgaWQ=" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_custom_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ==" remarks="Y3VzdG9tIGdyb3VwIGlk"/>
+      <column name="customfield_value" sqlType="VARCHAR" precision="2500" scale="0" nullable="true" jdbcType="12" remarks="ZmllbGQgdmFsdWU="/>
+      <column name="customfield_price" sqlType="DECIMAL" precision="15" scale="6" nullable="true" jdbcType="3" remarks="cHJpY2U="/>
+      <column name="disabler" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="override" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="customfield_params" sqlType="VARCHAR" precision="17000" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UGFyYW0gZm9yIFBsdWdpbnM="/>
+      <column name="product_sku" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="product_gtin" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="product_mpn" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_customfield_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="virtuemart_custom_id" unique="false" columns="virtuemart_custom_id"/>
+      <index name="virtuemart_product_id" unique="false" columns="virtuemart_product_id"/>
+    </table>
+    <table name="joomla_virtuemart_product_manufacturers" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="virtuemart_manufacturer_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_product_id" unique="true" columns="virtuemart_product_id,virtuemart_manufacturer_id"/>
+    </table>
+    <table name="joomla_virtuemart_product_medias" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_media_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_product_id" unique="true" columns="virtuemart_product_id,virtuemart_media_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+    </table>
+    <table name="joomla_virtuemart_product_prices" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_product_price_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_shoppergroup_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="product_price" sqlType="DECIMAL" precision="15" scale="6" nullable="true" jdbcType="3"/>
+      <column name="override" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="product_override_price" sqlType="DECIMAL" precision="15" scale="5" nullable="true" jdbcType="3"/>
+      <column name="product_tax_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="product_discount_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="product_currency" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="product_price_publish_up" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="product_price_publish_down" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="price_quantity_start" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="price_quantity_end" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_product_price_id"/>
+      <index name="price_quantity_end" unique="false" columns="price_quantity_end"/>
+      <index name="price_quantity_start" unique="false" columns="price_quantity_start"/>
+      <index name="product_price" unique="false" columns="virtuemart_product_id"/>
+      <index name="product_price_publish_down" unique="false" columns="product_price_publish_down"/>
+      <index name="product_price_publish_up" unique="false" columns="product_price_publish_up"/>
+      <index name="virtuemart_product_id" unique="false" columns="virtuemart_product_id"/>
+      <index name="virtuemart_shoppergroup_id" unique="false" columns="virtuemart_shoppergroup_id"/>
+    </table>
+    <table name="joomla_virtuemart_product_shoppergroups" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_shoppergroup_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_product_id" unique="true" columns="virtuemart_product_id,virtuemart_shoppergroup_id"/>
+    </table>
+    <table name="joomla_virtuemart_products" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="product_parent_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="product_sku" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_gtin" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_mpn" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_weight" sqlType="DECIMAL" precision="10" scale="4" nullable="true" jdbcType="3"/>
+      <column name="product_weight_uom" sqlType="VARCHAR" precision="7" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_length" sqlType="DECIMAL" precision="10" scale="4" nullable="true" jdbcType="3"/>
+      <column name="product_width" sqlType="DECIMAL" precision="10" scale="4" nullable="true" jdbcType="3"/>
+      <column name="product_height" sqlType="DECIMAL" precision="10" scale="4" nullable="true" jdbcType="3"/>
+      <column name="product_lwh_uom" sqlType="VARCHAR" precision="7" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_in_stock" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="product_ordered" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="low_stock_notification" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="product_available_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="product_availability" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="product_special" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="product_sales" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="product_unit" sqlType="VARCHAR" precision="8" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_packaging" sqlType="DECIMAL UNSIGNED" precision="8" scale="4" nullable="true" jdbcType="3"/>
+      <column name="product_params" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="hits" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="intnotes" sqlType="VARCHAR" precision="18000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="metarobot" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="metaauthor" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="layout" sqlType="CHAR" precision="16" scale="0" nullable="true" jdbcType="1"/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="pordering" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_product_id"/>
+      <index name="created_on" unique="false" columns="created_on"/>
+      <index name="modified_on" unique="false" columns="modified_on"/>
+      <index name="pordering" unique="false" columns="pordering"/>
+      <index name="product_parent_id" unique="false" columns="product_parent_id"/>
+      <index name="product_special" unique="false" columns="product_special"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_products_es_es" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="product_s_desc" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="product_desc" sqlType="VARCHAR" precision="18400" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="product_name" sqlType="CHAR" precision="180" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="metadesc" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="metakey" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="customtitle" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="slug" sqlType="CHAR" precision="192" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="virtuemart_product_id"/>
+      <index name="slug" unique="true" columns="slug"/>
+    </table>
+    <table name="joomla_virtuemart_rating_reviews" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_rating_review_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="comment" sqlType="VARCHAR" precision="18000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="review_ok" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="review_rates" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="review_ratingcount" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="review_rating" sqlType="DECIMAL" precision="10" scale="2" nullable="false" jdbcType="3" def="MC4wMA=="/>
+      <column name="review_editable" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="lastip" sqlType="CHAR" precision="50" scale="0" nullable="false" jdbcType="1" def="JzAn"/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_rating_review_id"/>
+      <index name="virtuemart_product_id" unique="true" columns="virtuemart_product_id,created_by"/>
+      <index name="created_by" unique="false" columns="created_by"/>
+      <index name="created_on" unique="false" columns="created_on"/>
+      <index name="published" unique="false" columns="published"/>
+    </table>
+    <table name="joomla_virtuemart_rating_votes" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_rating_vote_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="vote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="lastip" sqlType="CHAR" precision="50" scale="0" nullable="false" jdbcType="1" def="JzAn"/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_rating_vote_id"/>
+      <index name="virtuemart_product_id" unique="true" columns="virtuemart_product_id,created_by"/>
+      <index name="created_by" unique="false" columns="created_by"/>
+      <index name="created_on" unique="false" columns="created_on"/>
+    </table>
+    <table name="joomla_virtuemart_ratings" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_rating_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="rates" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ratingcount" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="rating" sqlType="DECIMAL" precision="10" scale="1" nullable="false" jdbcType="3" def="MC4w"/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_rating_id"/>
+      <index name="virtuemart_product_id" unique="true" columns="virtuemart_product_id,virtuemart_rating_id"/>
+      <index name="published" unique="false" columns="published"/>
+    </table>
+    <table name="joomla_virtuemart_shipmentmethod_shoppergroups" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_shipmentmethod_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_shoppergroup_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_shipmentmethod_id" unique="true" columns="virtuemart_shipmentmethod_id,virtuemart_shoppergroup_id"/>
+    </table>
+    <table name="joomla_virtuemart_shipmentmethods" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_shipmentmethod_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="shipment_jplugin_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shipment_element" sqlType="CHAR" precision="50" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="shipment_params" sqlType="VARCHAR" precision="19000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_shipmentmethod_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="shipment_element" unique="false" columns="shipment_element,virtuemart_vendor_id"/>
+      <index name="shipment_jplugin_id" unique="false" columns="shipment_jplugin_id"/>
+    </table>
+    <table name="joomla_virtuemart_shipmentmethods_es_es" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_shipmentmethod_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="shipment_name" sqlType="CHAR" precision="180" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="shipment_desc" sqlType="VARCHAR" precision="19000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="slug" sqlType="CHAR" precision="192" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="virtuemart_shipmentmethod_id"/>
+      <index name="slug" unique="true" columns="slug"/>
+    </table>
+    <table name="joomla_virtuemart_shoppergroups" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_shoppergroup_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="shopper_group_name" sqlType="CHAR" precision="128" scale="0" nullable="true" jdbcType="1"/>
+      <column name="shopper_group_desc" sqlType="CHAR" precision="255" scale="0" nullable="true" jdbcType="1"/>
+      <column name="custom_price_display" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="price_display" sqlType="BLOB" precision="65535" scale="0" nullable="false" jdbcType="-4"/>
+      <column name="default" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="sgrp_additional" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_shoppergroup_id"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="shared" unique="false" columns="shared"/>
+      <index name="shopper_group_name" unique="false" columns="shopper_group_name"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_states" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_state_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="virtuemart_country_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="virtuemart_worldzone_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="state_name" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="state_3_code" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="state_2_code" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_state_id"/>
+      <index name="state_2_code" unique="true" columns="virtuemart_vendor_id,virtuemart_country_id,state_2_code"/>
+      <index name="state_3_code" unique="true" columns="virtuemart_vendor_id,virtuemart_country_id,state_3_code"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="shared" unique="false" columns="shared"/>
+      <index name="virtuemart_country_id" unique="false" columns="virtuemart_country_id"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_userfield_values" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_userfield_value_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_userfield_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="fieldtitle" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="fieldvalue" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="sys" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_userfield_value_id"/>
+      <index name="virtuemart_userfield_id" unique="false" columns="virtuemart_userfield_id"/>
+    </table>
+    <table name="joomla_virtuemart_userfields" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_userfield_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="userfield_jplugin_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="title" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="description" sqlType="VARCHAR" precision="2048" scale="0" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="CHAR" precision="70" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="maxlength" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="size" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="required" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="cols" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="rows" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="value" sqlType="CHAR" precision="255" scale="0" nullable="true" jdbcType="1"/>
+      <column name="default" sqlType="CHAR" precision="255" scale="0" nullable="true" jdbcType="1"/>
+      <column name="registration" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="shipment" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="account" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="cart" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="readonly" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="calculated" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="sys" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="userfield_params" sqlType="VARCHAR" precision="17000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_userfield_id"/>
+      <index name="name" unique="true" columns="name"/>
+      <index name="account" unique="false" columns="account"/>
+      <index name="cart" unique="false" columns="cart"/>
+      <index name="ordering" unique="false" columns="ordering"/>
+      <index name="published" unique="false" columns="published"/>
+      <index name="shared" unique="false" columns="shared"/>
+      <index name="shipment" unique="false" columns="shipment"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_userinfos" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_userinfo_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="address_type" sqlType="CHAR" precision="2" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="address_type_name" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="name" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="company" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="title" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="last_name" sqlType="CHAR" precision="48" scale="0" nullable="true" jdbcType="1"/>
+      <column name="first_name" sqlType="CHAR" precision="48" scale="0" nullable="true" jdbcType="1"/>
+      <column name="middle_name" sqlType="CHAR" precision="48" scale="0" nullable="true" jdbcType="1"/>
+      <column name="phone_1" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="phone_2" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="fax" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="address_1" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="address_2" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="city" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="virtuemart_state_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_country_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="zip" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="agreed" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="tos" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="customer_note" sqlType="VARCHAR" precision="2500" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_userinfo_id"/>
+      <index name="address_type" unique="false" columns="address_type"/>
+      <index name="address_type_name" unique="false" columns="address_type_name"/>
+      <index name="i_virtuemart_user_id" unique="false" columns="virtuemart_userinfo_id,virtuemart_user_id"/>
+      <index name="virtuemart_user_id" unique="false" columns="virtuemart_user_id,address_type"/>
+    </table>
+    <table name="joomla_virtuemart_vendor_medias" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_media_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_vendor_id" unique="true" columns="virtuemart_vendor_id,virtuemart_media_id"/>
+    </table>
+    <table name="joomla_virtuemart_vendor_users" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="virtuemart_user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_vendor_id" unique="true" columns="virtuemart_vendor_id,virtuemart_user_id"/>
+    </table>
+    <table name="joomla_virtuemart_vendors" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="vendor_name" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="vendor_currency" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="vendor_accepted_currencies" sqlType="VARCHAR" precision="1536" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="vendor_params" sqlType="VARCHAR" precision="17000" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="metarobot" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1"/>
+      <column name="metaauthor" sqlType="CHAR" precision="64" scale="0" nullable="true" jdbcType="1"/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_vendor_id"/>
+      <index name="vendor_currency" unique="false" columns="vendor_currency"/>
+      <index name="vendor_name" unique="false" columns="vendor_name"/>
+    </table>
+    <table name="joomla_virtuemart_vendors_es_es" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_vendor_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="vendor_store_desc" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="vendor_terms_of_service" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="vendor_legal_info" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="vendor_letter_css" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="vendor_letter_header_html" sqlType="VARCHAR" precision="8000" scale="0" nullable="false" jdbcType="12" def="JzxoMT57dm06dmVuZG9ybmFtZX08L2gxPjxwPnt2bTp2ZW5kb3JhZGRyZXNzfTwvcD4n"/>
+      <column name="vendor_letter_footer_html" sqlType="VARCHAR" precision="8000" scale="0" nullable="false" jdbcType="12" def="JzxwPnt2bTp2ZW5kb3JsZWdhbGluZm99PGJyIC8+UGFnZSB7dm06cGFnZW51bX0ve3ZtOnBhZ2Vjb3VudH08L3A+Jw=="/>
+      <column name="vendor_store_name" sqlType="CHAR" precision="180" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="vendor_phone" sqlType="CHAR" precision="26" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="vendor_url" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="metadesc" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="metakey" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="customtitle" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="vendor_invoice_free1" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="vendor_invoice_free2" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="vendor_mail_free1" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="vendor_mail_free2" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="vendor_mail_css" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="slug" sqlType="CHAR" precision="192" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="virtuemart_vendor_id"/>
+      <index name="slug" unique="true" columns="slug"/>
+    </table>
+    <table name="joomla_virtuemart_vmuser_shoppergroups" schema="" catalog="miprofesional" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_shoppergroup_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="virtuemart_user_id" unique="true" columns="virtuemart_user_id,virtuemart_shoppergroup_id"/>
+    </table>
+    <table name="joomla_virtuemart_vmusers" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="user_is_vendor" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="customer_number" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="virtuemart_paymentmethod_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4"/>
+      <column name="virtuemart_shipmentmethod_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4"/>
+      <column name="agreed" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_user_id"/>
+      <index name="u_virtuemart_user_id" unique="true" columns="virtuemart_user_id,virtuemart_vendor_id"/>
+      <index name="user_is_vendor" unique="false" columns="user_is_vendor"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+    <table name="joomla_virtuemart_waitingusers" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_waitinguser_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="virtuemart_product_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="virtuemart_user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="notify_email" sqlType="CHAR" precision="150" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="notified" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="notify_date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_waitinguser_id"/>
+      <index name="notify_email" unique="false" columns="notify_email"/>
+      <index name="virtuemart_product_id" unique="false" columns="virtuemart_product_id"/>
+    </table>
+    <table name="joomla_virtuemart_worldzones" schema="" catalog="miprofesional" type="TABLE">
+      <column name="virtuemart_worldzone_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="virtuemart_vendor_id" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="zone_name" sqlType="CHAR" precision="255" scale="0" nullable="true" jdbcType="1"/>
+      <column name="zone_cost" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
+      <column name="zone_limit" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
+      <column name="zone_description" sqlType="VARCHAR" precision="18000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="zone_tax_rate" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ordering" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="shared" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="published" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="created_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modified_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="locked_on" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="locked_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="virtuemart_worldzone_id"/>
+      <index name="virtuemart_vendor_id" unique="false" columns="virtuemart_vendor_id"/>
+    </table>
+  </data-source>
+</component>
